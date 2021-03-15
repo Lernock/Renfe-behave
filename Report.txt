@@ -17,8 +17,8 @@ página web y behave para el desarrollo de la bateria de tests BDD.
 Realización de pruebas
 
 He comenzado creando una simple feature cuyo fin era seleccionar una estacion nde salida y de llegada, oprimir el boton y hacer una lista con los precios de los billetes.
-Todo esto para comprobar la correcta funcionalidad de la maquina, pero lamentablemente el fucionamiento de la pagina de renfe no la hace habilitable para la
-realizacion de una bateria de tests.
+Todo esto para comprobar la correcta funcionalidad de la maquina, pero lamentablemente el fucionamiento de la pagina de renfe no la hace seleccionable para la
+realizacion de una bateria de pruebas.
 
 Error encontrado
 
