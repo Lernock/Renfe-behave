@@ -1,0 +1,38 @@
+Ejecucion de pruebas sobre la pagina https://www.renfe.com/es/es utilizando behave y selenium
+
+El objetivo de esta prueba era realizar un estudio acerca de la pagina mencionada estudiandola y llevando a cabo pruebas variadas para comprobar su funcionalidad.
+
+Estudio de la pagina.
+
+La pagina tiene dos campos principales que son el origen y el destino, tambien tiene unos campos para introducir la fecha tanto de salida como llegada y un boton que solo 
+se habilita cuando las estaciones han sido correctamente escogidas.
+Una vez seleccionados todos los parametros y oprimido el boton, avanzaremos a la siguiente pantalla, o pantalla de resultados, donde nos saldra tda la informacion acerca de 
+los tickets de tren que tendremos a nuestra disposicion para escoger.
+
+Entorno empleado
+
+Para la realizacion de estas pruebas he pensado que los mas optimo seria una ejecuion de una bateria de tests empleando python como interprete, selenium para acceder a la 
+página web y behave para el desarrollo de la bateria de tests BDD.
+
+Realización de pruebas
+
+He comenzado creando una simple feature cuyo fin era seleccionar una estacion nde salida y de llegada, oprimir el boton y hacer una lista con los precios de los billetes.
+Todo esto para comprobar la correcta funcionalidad de la maquina, pero lamentablemente el fucionamiento de la pagina de renfe no la hace habilitable para la
+realizacion de una bateria de tests.
+
+Error encontrado
+
+Tras probar a realizar los tests de varias maneras he llegado a las siguientes conclusiones:
+  -La pagina web de renfe no admite únicamente la introduccion de texto a la hora de elegir la destinaciones, aunque introduzca el nombre de una de las estaciones correctamente,
+  como podria ser "MADRID (TODAS)" o "BARCELONA (TODAS)" el boton para avaanzar a la pantalla de compra de billetes nunca se habilita para ser clickado.
+  -Esto es debido a que la pagina espera a que se introduzca algo de texto, para luego sugerir estaciones basadas en el texto introducido, si introducimos "mad" la primera opcion
+  es "MADRID (TODAS)" y si clickamos en esa lista desplegable se escogera correctamente la estacion de salida o llegada, y haciendo lo mismo para la otra estación
+  el boton para comprar los billetes se habilita.
+  -mi pensamiento a priori ha sido el introducir algo de texto en los campos de texto e intentar seleccionar el nombre correcto de las estaciones una vez aparezca
+  la lista desplegable, pero al realizar los test con la libreria de selenium la lista desplegable no aparece ni una vez, y esto es debido a que es necesario estar seleccionando
+  el campo de las estaciones para poder acceder a la lista desplegable temporal, lo que ha resultado imposible empleando el framework utilizado.
+ 
+Conclusiones
+
+Lamentablemente el estudio de la pagina web de renfe no ha podido ser en profundiad debido a los fallos encontrados, se ha hecho un estudio de la pagina principal
+y se hyan encontrado errores que imposibilidad su estudio empleando un framework de pruebas en bateria BDD.
